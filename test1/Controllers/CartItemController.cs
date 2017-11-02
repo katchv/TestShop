@@ -60,5 +60,15 @@ namespace test1.Controllers
             return View();
         }
 
+        public ActionResult Success()
+        {
+            return View();
+        }
+
+        public ActionResult Fail()
+        {
+            return View();
+        }
+
     }
 }

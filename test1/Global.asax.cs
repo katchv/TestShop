@@ -21,7 +21,7 @@ namespace test1
 
             //Database.SetInitializer<ShopContext>(new Devtalk.EF.CodeFirst.DontDropDbJustCreateTablesIfModelChanged<ShopContext>());
 
-            Database.SetInitializer<ShopContext>(new DropCreateDatabaseAlways<ShopContext>());
+            //Database.SetInitializer<ShopContext>(new DropCreateDatabaseAlways<ShopContext>());
             
         }
     }

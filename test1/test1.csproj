@@ -227,6 +227,8 @@
     <Content Include="Views\CartItem\DelItem.cshtml" />
     <Content Include="Views\CartItem\ChangeQuantity.cshtml" />
     <Content Include="Views\CartItem\Pay.cshtml" />
+    <Content Include="Views\CartItem\Success.cshtml" />
+    <Content Include="Views\CartItem\Fail.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
