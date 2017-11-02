@@ -306,10 +306,7 @@ table {
           box-sizing: border-box;
 }
 
-form {
-    float: left;
-    width: 50px;
-}
+
 
 html {
   font-size: 62.5%;
@@ -6824,5 +6821,9 @@ td.visible-print {
     display: none !important;
   }
 
+  form {
+    float: left;
+    width: 50px;
+}
 }
 

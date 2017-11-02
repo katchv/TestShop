@@ -18,11 +18,6 @@ namespace test1
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            //Database.SetInitializer<ShopContext>(new Devtalk.EF.CodeFirst.DontDropDbJustCreateTablesIfModelChanged<ShopContext>());
-
-            //Database.SetInitializer<ShopContext>(new DropCreateDatabaseAlways<ShopContext>());
-            
         }
     }
 }
