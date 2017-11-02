@@ -19,7 +19,9 @@ namespace test1
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            Database.SetInitializer<ShopContext>(new Devtalk.EF.CodeFirst.DontDropDbJustCreateTablesIfModelChanged<ShopContext>());
+            //Database.SetInitializer<ShopContext>(new Devtalk.EF.CodeFirst.DontDropDbJustCreateTablesIfModelChanged<ShopContext>());
+
+            Database.SetInitializer<ShopContext>(new DropCreateDatabaseAlways<ShopContext>());
             
         }
     }
