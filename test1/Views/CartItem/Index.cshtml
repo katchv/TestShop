@@ -45,7 +45,7 @@
 </table>
 <div>
     <h2>Итого:</h2>
-    <h4>@ViewBag.PageCart.bill руб.</h4><br><br>
+    <h4>@ViewBag.PageCart.bill руб.</h4><br>
     <div>
         <form method="post" action="https://wl.walletone.com/checkout/checkout/Index">
             <input type="hidden" value="@ViewBag.PageCart.number" name="num" />
@@ -58,7 +58,7 @@
             <input type="submit" value="Оплатить заказ" class="btn" />
         </form>
     </div>
-</div><br>
+</div>
 <hr/>
 <div>
     @for (int i = 1; i <= ViewBag.PageCart.allPages; i++)
@@ -72,4 +72,3 @@
         </div>
     }
 </div>
-<br>
