@@ -158,11 +158,16 @@ legend {
   border: 0;
 }
 
-  form {
-      display: inline-block;
-      align-content: center;
-      width: 50px;
-  }
+form {
+    display: inline-block;
+    align-content: center;
+    width: 50px;
+}
+.qu {
+    display: inline-block;
+    align-content: center;
+    width: 50px;
+}
 
 button,
 input,

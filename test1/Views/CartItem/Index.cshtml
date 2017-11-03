@@ -17,15 +17,15 @@
             <td>@item.Name</td>
             <td>@item.Price</td>
             <td>
-                @using (Html.BeginForm("ChangeQuantity", "CartItem", FormMethod.Post))
+                @using (Html.BeginForm("ChangeQuantity", "CartItem", FormMethod.Post, new {@class="qu"}))
                 {
                     <input type="hidden" value="@item.CartItemId" name="id" />
                     <input type="hidden" value="@ViewBag.PageCart.number" name="num" />
                     <input type="hidden" value="0" name="flag" />
                     <input type="submit" value="-" class="btn" />
                 }
-                <form>@item.Quantity</form> 
-                @using (Html.BeginForm("ChangeQuantity", "CartItem", FormMethod.Post))
+                <form class="qu">@item.Quantity</form> 
+                @using (Html.BeginForm("ChangeQuantity", "CartItem", FormMethod.Post, new {@class="qu"}))
                 {
                     <input type="hidden" value="@item.CartItemId" name="id" />
                     <input type="hidden" value="@ViewBag.PageCart.number" name="num" />
