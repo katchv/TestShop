@@ -24,7 +24,7 @@
                     <input type="hidden" value="0" name="flag" />
                     <input type="submit" value="-" class="btn" />
                 }
-                <form>@item.Quantity</form> 
+                @item.Quantity
                 @using (Html.BeginForm("ChangeQuantity", "CartItem", FormMethod.Post))
                 {
                     <input type="hidden" value="@item.CartItemId" name="id" />

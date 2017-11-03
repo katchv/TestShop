@@ -27,17 +27,16 @@
         </tr>
     }
 </table>
-
-<table><tr>
+<div>
     @for (int i = 1; i <= ViewBag.Page.allPages; i++)
     {
-        <td>
+        <div>
             @using (Html.BeginForm("Index", "Home", FormMethod.Post))
             {
                 <input type="hidden" value="@i" name="num" />
                 <input type="submit" value=@i class="btn" />
             }
-        </td>
+        </div>
     }
-</tr></table>
+</div>
 <br>
