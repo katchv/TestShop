@@ -6820,6 +6820,10 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+  form {
+      display: inline-block;
+      width: 50px;
+  }
 
 }
 
