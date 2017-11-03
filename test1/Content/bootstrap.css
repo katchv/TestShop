@@ -158,6 +158,12 @@ legend {
   border: 0;
 }
 
+  form {
+      display: inline-block;
+      align-content: center;
+      width: 50px;
+  }
+
 button,
 input,
 select,
@@ -6820,11 +6826,7 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
-  form {
-      display: inline-block;
-      align-content: center;
-      width: 50px;
-  }
+
 
 }
 

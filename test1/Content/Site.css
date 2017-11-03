@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+  form {
+      display: inline-block;
+      align-content: center;
+      width: 50px;
+  }
