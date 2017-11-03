@@ -33,14 +33,15 @@
                     <input type="submit" value="+" class="btn" />
                 }
             </td>
-            <td>@using (Html.BeginForm("DelItem", "CartItem", FormMethod.Post))
+            <td>
+                @using (Html.BeginForm("DelItem", "CartItem", FormMethod.Post))
                 {
                     <input type="hidden" value="@item.CartItemId" name="Id" />
                     <input type="hidden" value="@ViewBag.PageCart.number" name="num" />
                     <input type="submit" value="Удалить" class="btn" />
                 }
-            </td>
-        </tr>
+        </td>
+    </tr>
     }
 </table>
 <div>
@@ -59,16 +60,18 @@
         </form>
     </div>
 </div>
-<hr/>
-<div>
-    @for (int i = 1; i <= ViewBag.PageCart.allPages; i++)
-    {
-        <div>
-            @using (Html.BeginForm("Index", "CartItem", FormMethod.Post))
-            {
-                <input type="hidden" value="@i" name="num" />
-                <input type="submit" value=@i class="btn" />
-            }
-        </div>
-    }
-</div>
+<hr />
+<table>
+    <tr>
+        @for (int i = 1; i <= ViewBag.PageCart.allPages; i++)
+        {
+            <td>
+                @using (Html.BeginForm("Index", "CartItem", FormMethod.Post))
+                {
+                    <input type="hidden" value="@i" name="num" />
+                    <input type="submit" value=@i class="btn" />
+                }
+            </td>
+        }
+    </tr>
+</table>

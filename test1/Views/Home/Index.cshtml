@@ -17,26 +17,29 @@
             <td>@item.Name</td>
             <td>@item.Decription</td>
             <td>@item.Price</td>
-            <td>@using (Html.BeginForm("ToCart", "Home", FormMethod.Post))
-                    {
-                        <input type="hidden" value="@ViewBag.Page.number" name="num" />
-                        <input type="hidden" value="@item.Id" name="id" />
-                        <input type="submit" value="В корзину" class="btn"/>
-                    }
-            </td>
-        </tr>
+            <td>
+                @using (Html.BeginForm("ToCart", "Home", FormMethod.Post))
+                {
+                    <input type="hidden" value="@ViewBag.Page.number" name="num" />
+                    <input type="hidden" value="@item.Id" name="id" />
+                    <input type="submit" value="В корзину" class="btn" />
+                }
+        </td>
+    </tr>
     }
 </table>
-<div>
-    @for (int i = 1; i <= ViewBag.Page.allPages; i++)
-    {
-        <div>
-            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-            {
-                <input type="hidden" value="@i" name="num" />
-                <input type="submit" value=@i class="btn" />
-            }
-        </div>
-    }
-</div>
+<table>
+    <tr>
+        @for (int i = 1; i <= ViewBag.Page.allPages; i++)
+        {
+            <td>
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                {
+                    <input type="hidden" value="@i" name="num" />
+                    <input type="submit" value=@i class="btn" />
+                }
+            </td>
+        }
+    </tr>
+</table>
 <br>
