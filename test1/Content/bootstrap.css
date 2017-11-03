@@ -6821,9 +6821,5 @@ td.visible-print {
     display: none !important;
   }
 
-  form {
-    float: left;
-    width: 50px;
-}
 }
 

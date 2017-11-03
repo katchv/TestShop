@@ -28,14 +28,16 @@
     }
 </table>
 
-@for (int i = 1; i <= ViewBag.Page.allPages; i++)
-{
-    <div>
-        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-        {
-            <input type="hidden" value="@i" name="num" />
-            <input type="submit" value=@i class="btn" />
-        }
-    </div>
-}
+<table><tr>
+    @for (int i = 1; i <= ViewBag.Page.allPages; i++)
+    {
+        <td>
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+            {
+                <input type="hidden" value="@i" name="num" />
+                <input type="submit" value=@i class="btn" />
+            }
+        </td>
+    }
+</tr></table>
 <br>

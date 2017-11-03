@@ -40,8 +40,9 @@ namespace test1.Controllers
         {
             System.Data.SqlClient.SqlParameter param = new System.Data.SqlClient.SqlParameter("@id", id);
             db.Database.ExecuteSqlCommand("delFromCart @id", param);
-            ViewBag.PageCart = MakePage(num);
-            return View(ViewBag.PageCart);
+            //ViewBag.PageCart = MakePage(num);
+            //return View(ViewBag.PageCart);
+            return RedirectToAction("Index", "CartItem", new { num = num });
         }
 
         [HttpPost]
@@ -51,8 +52,9 @@ namespace test1.Controllers
             System.Data.SqlClient.SqlParameter paramflag = new System.Data.SqlClient.SqlParameter("@flag", flag);
             db.Database.ExecuteSqlCommand("changeQu @id, @flag", paramid,paramflag);
 
-            ViewBag.PageCart = MakePage(num);
-            return View(ViewBag.PageCart);
+            //ViewBag.PageCart = MakePage(num);
+            //return View(ViewBag.PageCart);
+            return RedirectToAction("Index", "CartItem", new { num = num });
         }
 
         public ActionResult Pay()
