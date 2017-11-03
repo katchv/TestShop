@@ -161,12 +161,9 @@ legend {
 form {
     display: inline-block;
     align-content: center;
-    width: 50px;
+    width: 34px;
 }
-.qu {
-    display: inline-block;
-    align-content: center;
-    width: 50px;
+
 }
 
 button,
